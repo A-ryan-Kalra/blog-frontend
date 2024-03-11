@@ -4,14 +4,17 @@ import dotenv from "dotenv";
 dotenv.config();
 // https://vitejs.dev/config/
 // console.log(process.env.VITE_SERVER_URL, "process.env.VITE_SERVER_URL");
-
 export default defineConfig({
   plugins: [react()],
   server: {
     open: true,
     port: 3000,
-    proxy: {
-      "/api": process.env.VITE_SERVER_URL as string,
-    },
+    // proxy: {
+    //   "/api": {
+    //     target: process.env.VITE_SERVER_URL,
+    //     secure: false,
+    //     changeOrigin: true,
+    //   },
+    // },
   },
 });
