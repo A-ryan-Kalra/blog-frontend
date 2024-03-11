@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/api/(.*)",
-      "destination": "https://eblog-backend.onrender.com/"
+      "source": "/api/:path*",
+      "destination": "https://eblog-backend.onrender.com/:path*"
     },
     {
       "source": "/(.*)",
